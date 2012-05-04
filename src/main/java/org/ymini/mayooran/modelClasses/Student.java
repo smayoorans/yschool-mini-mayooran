@@ -1,3 +1,4 @@
+
 package org.ymini.mayooran.modelClasses;
 
 public class Student {
@@ -7,9 +8,7 @@ public class Student {
     private String parentname;
     private String address;
 
-    public Student() {
-	
-		
+    public Student() {	
         
     }
 

@@ -16,15 +16,23 @@
                         <th>Grade:</th>
                         <th>
                             <select name="grade">
-                                <option>A</option>
-                                <option>B</option>
-                                <option>C</option>
-                                <option>D</option>
-                                <option>E</option>
-                                <option>F</option>                                
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option> 
+                                <option>8</option> 
+                                <option>9</option> 
+                                <option>10</option> 
+                                <option>11</option> 
+                                <option>12</option>
+                                <option>13</option> 
                             </select> 
                         </th>
-                    </tr>
+                    </tr>                   
+                    
                     <tr>
                         <th>&nbsp;</th>
                         <th>&nbsp;</th>

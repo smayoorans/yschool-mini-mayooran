@@ -7,9 +7,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.ymini.mayooran.modelClasses.Student;
 
+import org.ymini.mayooran.modelClasses.Student;
 import org.ymini.mayooran.modelClasses.StudentSearchService;
+
 
 @WebServlet(name = "MyServlet", urlPatterns = {"/MyServletMayooran"})
 public class MyServlet extends HttpServlet { 
@@ -39,11 +40,17 @@ public class MyServlet extends HttpServlet {
         
         if(result){
 		
-            StudentSearchService ss=new StudentSearchService();        
-            Student ob=ss.findStudent(sname, grade);
-            request.setAttribute("ob",ob);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("success.jsp");
-            dispatcher.forward(request,response);
+            StudentSearchService ss=new StudentSearchService(); 
+            Student ob=ss.findStudent(sname,grade);
+                if(ob!=null){
+                        request.setAttribute("ob",ob);
+                        RequestDispatcher dispatcher = request.getRequestDispatcher("success.jsp");
+                        dispatcher.forward(request,response);
+                }
+                else{
+                        response.sendRedirect("errorResponse.jsp");
+
+                }
             
         }
         else{
